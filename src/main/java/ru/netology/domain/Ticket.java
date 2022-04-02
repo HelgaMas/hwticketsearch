@@ -15,15 +15,14 @@ public class Ticket implements Comparable<Ticket> {
         this.travelTime = travelTime;
     }
 
-
     @Override
-    public int compareTo(Ticket o) {
-        Ticket p = (Ticket) o;
-        if (this.price < p.price) {
+    public int compareTo(Ticket ticket) {
+        if (this.price < ticket.price) {
             return -1;
-        } else if (this.price > p.price) {
+        } else if (this.price > ticket.price) {
             return 1;
         }
+
         return 0;
     }
 
